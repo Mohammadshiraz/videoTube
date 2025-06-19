@@ -23,4 +23,7 @@ app.use(express.urlencoded({ limit: "16kb", extended: true }));
 //static create a folder and store data in server
 app.use(express.static("public"));
 
+import userRouter from "./routes/user.route.js";
+app.use("/api/v1/user", userRouter);
+
 export { app };
